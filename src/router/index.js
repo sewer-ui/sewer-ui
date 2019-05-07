@@ -4,11 +4,17 @@ import HelloWorld from '@/components/HelloWorld'
 import storeSetup from '@/components/hotelSetup/storeSetup'
 import roomType from '@/components/hotelSetup/roomType'
 import roomSetup from '@/components/hotelSetup/roomSetup'
+import orderStore from '@/components/order/orderStore'
 
 Vue.use(Router)
 
 export default new Router({
     routes: [{
+            path: '/orderStore',
+            name: 'orderStore',
+            component: orderStore
+        },
+        {
             path: '/storeSetup',
             name: 'storeSetup',
             component: storeSetup
