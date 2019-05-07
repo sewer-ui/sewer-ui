@@ -5,6 +5,7 @@ import storeSetup from '@/components/hotelSetup/storeSetup'
 import roomType from '@/components/hotelSetup/roomType'
 import roomSetup from '@/components/hotelSetup/roomSetup'
 import orderStore from '@/components/order/orderStore'
+import settlement from '@/components/settlement/settlement'
 
 Vue.use(Router)
 
@@ -13,6 +14,11 @@ export default new Router({
             path: '/orderStore',
             name: 'orderStore',
             component: orderStore
+        },
+        {
+            path: '/settlement',
+            name: 'settlement',
+            component: settlement
         },
         {
             path: '/storeSetup',
