@@ -6,6 +6,9 @@ import roomType from '@/components/hotelSetup/roomType'
 import roomSetup from '@/components/hotelSetup/roomSetup'
 import orderStore from '@/components/order/orderStore'
 import settlement from '@/components/settlement/settlement'
+import calendar from '@/components/calendar/calendar'
+import login from '@/components/login/login'
+import index from '@/components/index/index'
 
 Vue.use(Router)
 
@@ -14,6 +17,26 @@ export default new Router({
             path: '/orderStore',
             name: 'orderStore',
             component: orderStore
+        },
+        {
+            path: '/index',
+            name: 'index',
+            component: index
+        },
+        {
+            path: '/',
+            name: 'login',
+            component: login
+        },
+        {
+            path: '/login',
+            name: 'login',
+            component: login
+        },
+        {
+            path: '/calendar',
+            name: 'calendar',
+            component: calendar
         },
         {
             path: '/settlement',
@@ -35,10 +58,5 @@ export default new Router({
             name: 'roomType',
             component: roomType
         },
-        {
-            path: '/',
-            name: 'HelloWorld',
-            component: HelloWorld
-        }
     ]
 })
