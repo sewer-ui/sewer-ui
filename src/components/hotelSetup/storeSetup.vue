@@ -155,11 +155,12 @@
         padding: 15px 0 12px;
     }
     .setupBtn{
-        display: inline-block;
-        width: 65px;
-        height: 33px;
-        line-height: 33px;
-        background: #259b24;
+            display: inline-block;
+            width: 90px;
+            height: 33px;
+            color: #fff;
+            line-height: 33px;
+            background: #259b24;
     }
     .storeInfo{
         padding-top: 12px;

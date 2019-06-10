@@ -46,3 +46,31 @@
 .ft20 {
     font-size: 20px;
 }
+
+.mar20-top {
+    margin-top: 20px;
+}
+
+.mar20-bottom {
+    margin-bottom: 20px;
+}
+
+.mar10-right {
+    margin-right: 10px;
+}
+
+.mar15-right {
+    margin-right: 15px;
+}
+
+.mar20-right {
+    margin-right: 20px;
+}
+
+.col-10 {
+    color: #101010
+}
+
+.col-e72 {
+    color: #e72235;
+}
