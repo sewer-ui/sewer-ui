@@ -1,6 +1,6 @@
 <template>
     <div class="bglogin">
-        sssss
+        sssss12122112
     </div>
 </template>
 <script>

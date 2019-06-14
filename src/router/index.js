@@ -11,14 +11,14 @@ import login from '@/components/login/login'
 import index from '@/components/index/index'
 
 
-const contractRouter  = require("../contract/router/index")
+const contractRouter = require("../contract/router/index")
 
 Vue.use(Router)
-
+console.log('1', contractRouter)
 export default new Router({
     routes: [
-        ...contractRouter,
-        ,{
+        ...contractRouter.default,
+        {
             path: '/orderStore',
             name: 'orderStore',
             component: orderStore

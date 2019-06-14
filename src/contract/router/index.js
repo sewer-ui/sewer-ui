@@ -1,11 +1,8 @@
-
-
-import admin from "../views/adminLogin"
+import adminLogin from "../views/adminLogin.vue"
 
 const contractRouter = [{
-        path: "contract", // 后台管理登录页
-        name: "contract",
-        component: admin,
-    }
-]
+    path: "/adminLogin",
+    name: "adminLogin",
+    component: adminLogin
+}, ]
 export default contractRouter
