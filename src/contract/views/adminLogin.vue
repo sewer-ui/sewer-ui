@@ -23,7 +23,7 @@
       </div>
     </div>
     <div>
-        <foot>1111</foot>
+        <foot></foot>
     </div>
   </div>
 </template>
