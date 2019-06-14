@@ -20,7 +20,7 @@
     </div>
     <div class="content-container">
       <div class="content-left">
-        <Menu active-name="1-2" :open-names="['1']" on-select="selecItme">
+        <Menu active-name="1-2" :open-names="['1']" @on-select="selecItme">
           <Submenu name="1">
             <template slot="title">
               <Icon type="ios-analytics"/>节点
@@ -38,19 +38,26 @@
         </Menu>
       </div>
       <div class="content-right">
-        <Card class="card">
-          <div>
-            <span></span>
-            <div>
-              <span>ip:</span>
-              <span>url:</span>
-            </div>
-            <div>
-              <Button type="error">停止</Button>
-              <Button type="success">加入</Button>
-            </div>
+        <Card class="card" v-if="activeViewIndex==='1-2'">
+          <span class="status-icon" :class="{'join-status':true}"></span>
+          <div class="ip-box">
+            <span>ip:</span>
+            <span>127.0.10.10</span>
+          </div>
+          <div class="url-box">
+            <span>url:</span>
+            <span>https://www.baidu.com</span>
+          </div>
+          <div class="card-btn">
+            <Button class="stop" type="error">停止</Button>
+            <Button type="success">加入</Button>
           </div>
         </Card>
+        <!-- 执行合约 -->
+        <deploy v-if="activeViewIndex==='2-1'"></deploy>  
+
+        <elastic v-if="activeViewIndex==='1-1'"></elastic>
+        <implement v-if="activeViewIndex==='2-1'"></implement>
       </div>
     </div>
 
@@ -60,12 +67,13 @@
 <script>
 import foot from "../components/foot";
 
-import deploy from  "../components/caseList/deploy"
-import elastic from  "../components/caseList/elastic"
-import implement from  "../components/caseList/implement"
+import deploy from "../components/caseList/deploy";
+import elastic from "../components/caseList/elastic";
+import implement from "../components/caseList/implement";
 export default {
   data() {
     return {
+      activeViewIndex: "1-2",
       userInfo: {
         userName: "admin",
         userImg: "../../../static/img/userImg.jpeg"
@@ -78,9 +86,19 @@ export default {
     implement,
     foot
   },
-  methods:{
-    selecItme(e){
-        console.log("e",e)
+  methods: {
+    selecItme(e) {
+      console.log("e", e);
+      this.activeViewIndex = e;
+
+      if (e === "1-1") {
+      }
+      if (e === "1-2") {
+      }
+      if (e === "2-1") {
+      }
+      if (e === "2-2") {
+      }
     }
   }
 };
@@ -187,6 +205,59 @@ export default {
     .card {
       width: 400px;
       height: 500px;
+      position: relative;
+      .status-icon {
+        width: 10px;
+        height: 10px;
+        display: block;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: red;
+      }
+      .join-status {
+        background-color: #19be6b;
+      }
+      .ip-box,
+      .url-box {
+        width: 100%;
+        font-size: 20px;
+        color: #333;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+      }
+      .ip-box {
+        & > span:nth-child(1) {
+          font-weight: bolder;
+        }
+      }
+
+      .url-box {
+        & > span:nth-child(1) {
+          font-weight: bolder;
+        }
+        & > span:nth-child(2) {
+          word-break: break-all;
+          text-align: left;
+        }
+      }
+      .card-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        .stop {
+          margin-right: 40px;
+        }
+      }
     }
   }
 }

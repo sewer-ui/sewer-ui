@@ -38,7 +38,7 @@
     text-align: left;
 }
 .elasticBox{
-    background: rgba(0, 0, 0, 0.7);
+    /* background: rgba(0, 0, 0, 0.7); */
     height: 100%;
     width: 100%;
     display: flex;
