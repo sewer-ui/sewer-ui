@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class=".nav">
-      <tab></tab>
+      <tab :activeIndex='2'></tab>
     </div>
     <div>
       <div class="header">

@@ -19,25 +19,32 @@
 export default {
   data() {
     return {
-        activeIndex:0,
-      leftNav: [
-        { tit: "首页", path: "" },
-        { tit: "文档", path: "" },
-        { tit: "关于我们", path: "" }
-      ],
-      rightNav: [{ tit: "控制台", path: "" }]
+        leftNav: [
+          { tit: "首页", path: "/adminLogin" },
+          { tit: "文档", path: "1" },
+          { tit: "关于我们", path: "/myabout" }
+        ],
+        rightNav: [{ tit: "控制台", path: "" }]
     };
+  },
+  props:{
+    activeIndex:{
+      default:0,
+      type:Number
+    }
   },
   created(){
 
   },
   methods:{
       clickNav(e){
-          
           if( e.target.id==='') return;
           let index = e.target.id*1
           console.log("e",index)
-          this.activeIndex = index
+          // this.activeIndex = index
+          if(index == 0){
+            this.$router.push({path: '/adminLogin'});
+          }
           if(index == 2){
             this.$router.push({path: '/myabout'});
           }
