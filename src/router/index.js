@@ -10,10 +10,15 @@ import calendar from '@/components/calendar/calendar'
 import login from '@/components/login/login'
 import index from '@/components/index/index'
 
+
+const contractRouter  = require("../contract/router/index")
+
 Vue.use(Router)
 
 export default new Router({
-    routes: [{
+    routes: [
+        ...contractRouter,
+        ,{
             path: '/orderStore',
             name: 'orderStore',
             component: orderStore

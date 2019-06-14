@@ -17,7 +17,8 @@
     export default {
         data () {
             return {
-                theme1: 'login'
+                theme1: 'login',
+                value:""
             }
         },
         methods:{
