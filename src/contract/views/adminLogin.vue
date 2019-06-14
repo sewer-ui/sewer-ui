@@ -1,21 +1,25 @@
 <template>
     <div class="bglogin">
-        sssss12122112
+        <div class="header">
+            <!-- <tab></tab> -->
+        </div>
     </div>
 </template>
 <script>
+import tab from '../components/nav'
+
     export default {
         data () {
             return {}
     },
+    components:{
+        tab
+    },
     created(){
-        alert("1")
     }
     }
 </script>
 
 <style lang="css" scope>
-.bglogin{
-  
-}
+
 </style>
