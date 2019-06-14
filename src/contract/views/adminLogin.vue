@@ -22,10 +22,14 @@
         </div>
       </div>
     </div>
+    <div>
+        <foot>1111</foot>
+    </div>
   </div>
 </template>
 <script>
 import tab from "../components/nav";
+import foot from "../components/foot";
 
 export default {
   data() {
@@ -35,27 +39,21 @@ export default {
     };
   },
   components: {
-    tab
+    tab,
+    foot
   },
   created() {},
   methods: {
     error(nodesc) {
       this.$Notice.error({
-        title: "这是通知标题",
-        desc: nodesc
-          ? ""
-          : "这里是通知描述这里,是通知描述这里是通知描述这里,是通知描述这里,是通知描述这里是通知描述这里是通知描述"
+        title: "请输入正确的用户名密码",
       });
     },
     loginBtn() {
-      if (this.username != "admin") {
+      if (this.username != "admin" || this.psw != "admin") {
         this.error();
         return;
       }
-      if (this.psw != "admin") {
-        return;
-      }
-
       if (psw == "admin" && username == "admin") {
       }
     }
