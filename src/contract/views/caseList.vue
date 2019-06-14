@@ -20,7 +20,7 @@
     </div>
     <div class="content-container">
       <div class="content-left">
-        <Menu active-name="1-2" :open-names="['1']">
+        <Menu active-name="1-2" :open-names="['1']" on-select="selecItme">
           <Submenu name="1">
             <template slot="title">
               <Icon type="ios-analytics"/>节点
@@ -60,6 +60,9 @@
 <script>
 import foot from "../components/foot";
 
+import deploy from  "../components/caseList/deploy"
+import elastic from  "../components/caseList/elastic"
+import implement from  "../components/caseList/implement"
 export default {
   data() {
     return {
@@ -70,7 +73,15 @@ export default {
     };
   },
   components: {
+    deploy,
+    elastic,
+    implement,
     foot
+  },
+  methods:{
+    selecItme(e){
+        console.log("e",e)
+    }
   }
 };
 </script>
