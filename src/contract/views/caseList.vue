@@ -19,45 +19,40 @@
       </div>
     </div>
     <div class="content-container">
-        <div class="content-left">
-              <Row>
-        <i-col span="8">
-            <Menu :theme="theme2">
-                <Submenu key="1">
-                    <template slot="title">
-                        <!-- <Icon type="ios-paper"></Icon> -->
-                        内容管理
-                    </template>
-                    <Menu-item key="1-1">文章管理</Menu-item>
-                    <Menu-item key="1-2">评论管理</Menu-item>
-                    <Menu-item key="1-3">举报管理</Menu-item>
-                </Submenu>
-                <Submenu key="2">
-                    <template slot="title">
-                        <!-- <Icon type="ios-people"></Icon> -->
-                        用户管理
-                    </template>
-                    <Menu-item key="2-1">新增用户</Menu-item>
-                    <Menu-item key="2-2">活跃用户</Menu-item>
-                </Submenu>
-                <Submenu key="3">
-                    <template slot="title">
-                        <!-- <Icon type="stats-bars"></Icon> -->
-                        统计分析
-                    </template>
-                    <Menu-group title="使用">
-                        <Menu-item key="3-1">新增和启动</Menu-item>
-                    </Menu-group>
-                    <Menu-group title="留存">
-                        <Menu-item key="3-4">用户留存</Menu-item>
-                    </Menu-group>
-                </Submenu>
-            </Menu>
-        </i-col>
-    </Row>
-        </div>
-        <div class="content-right"></div>
+      <div class="content-left">
+        <Menu active-name="1-2" :open-names="['1']">
+          <Submenu name="1">
+            <template slot="title">
+              <Icon type="ios-analytics"/>节点
+            </template>
+            <MenuItem name="1-1">创建节点</MenuItem>
+            <MenuItem name="1-2">我的节点</MenuItem>
+          </Submenu>
+          <Submenu name="2">
+            <template slot="title">
+              <Icon type="ios-filing"/>合约
+            </template>
+            <MenuItem name="2-1">部署</MenuItem>
+            <MenuItem name="2-2">执行合约</MenuItem>
+          </Submenu>
+        </Menu>
       </div>
+      <div class="content-right">
+        <Card class="card">
+          <div>
+            <span></span>
+            <div>
+              <span>ip:</span>
+              <span>url:</span>
+            </div>
+            <div>
+              <Button type="error">停止</Button>
+              <Button type="success">加入</Button>
+            </div>
+          </div>
+        </Card>
+      </div>
+    </div>
 
     <foot></foot>
   </div>
@@ -169,6 +164,19 @@ export default {
     min-height: 684px;
     box-shadow: 0 0 5px 3px #f3f3f3;
     background-color: #fff;
+  }
+  .content-right {
+    flex: 1;
+    min-height: 684px;
+    background-color: #fff;
+    margin-left: 20px;
+    padding: 20px 15px 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    .card {
+      width: 400px;
+      height: 500px;
+    }
   }
 }
 </style>
