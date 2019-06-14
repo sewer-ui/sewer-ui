@@ -38,6 +38,9 @@ export default {
           let index = e.target.id*1
           console.log("e",index)
           this.activeIndex = index
+          if(index == 2){
+            this.$router.push({path: '/myabout'});
+          }
       }
   }
 };

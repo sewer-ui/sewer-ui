@@ -1,7 +1,7 @@
 <template>
-    <div class="elasticBox">
-     <div class="bg-withe elastic">
-          <p class="mar20-bottom" >
+     <div class="bg-withe alignLeft">
+     <!-- <div class="bg-withe elastic"> -->
+          <p class="mar20-bottom mar20-top" >
               <span class="lablebox">url：</span><Input v-model="company" placeholder="请输入公司名字" style="width: 300px" />
           </p>
           <p class="mar20-bottom" >
@@ -10,7 +10,7 @@
           <div>
                <Button type="primary">部署合约</Button>
           </div>
-     </div>
+     <!-- </div> -->
     </div>
 </template>
 <script>
