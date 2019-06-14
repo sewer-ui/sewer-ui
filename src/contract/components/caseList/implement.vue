@@ -2,18 +2,14 @@
     <div class="elasticBox">
      <div class="bg-withe elastic">
           <p class="mar20-bottom" >
-              <span class="lablebox">公司名字：</span><Input v-model="company" placeholder="请输入公司名字" style="width: 300px" />
-          </p>
-          <p class="mar20-bottom">
-            <span class="lablebox">邮箱：</span><Input v-model="mailbox" placeholder="请输入邮箱"  style="width: 300px" />
+              <span class="lablebox">url：</span><Input v-model="company" placeholder="请输入公司名字" style="width: 300px" />
           </p>
           <p class="mar20-bottom" >
-             <span class="lablebox">备注：</span><Input v-model="remarks" type="textarea" :rows="4" placeholder="备注" style="width: 300px"/>
+             <span class="lablebox">代码：</span><Input v-model="remarks" type="textarea" :rows="4" placeholder="备注" style="width: 300px"/>
           </p>
           <div>
-               <Button type="primary">提交</Button>
+               <Button type="primary">部署合约</Button>
           </div>
-              
      </div>
     </div>
 </template>
@@ -22,7 +18,6 @@
         data () {
             return {
                 company:'',
-                mailbox:'',
                 remarks:'',
             }
     },
