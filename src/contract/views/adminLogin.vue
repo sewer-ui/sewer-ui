@@ -54,7 +54,8 @@ export default {
         this.error();
         return;
       }
-      if (psw == "admin" && username == "admin") {
+      if (this.psw == "admin" && this.username == "admin") {
+           this.$router.push({path: '/caseList'});
       }
     }
   }

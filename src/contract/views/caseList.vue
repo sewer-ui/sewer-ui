@@ -15,7 +15,7 @@
           <img :src="userInfo.userImg">
           <span>{{userInfo.userName}}</span>
         </div>
-        <span class="logout-btn active-color">退出</span>
+        <span class="logout-btn active-color" @click="logout">退出</span>
       </div>
     </div>
     <div class="content-container">
@@ -53,10 +53,11 @@
             <Button type="success">加入</Button>
           </div>
         </Card>
-        <!-- 执行合约 -->
-        <deploy v-if="activeViewIndex==='2-1'"></deploy>  
-
+        <!-- 创建节点 -->
         <elastic v-if="activeViewIndex==='1-1'"></elastic>
+        <!-- 执行合约 -->
+        <deploy v-if="activeViewIndex==='2-2'"></deploy>  
+        <!-- 部署合约 -->
         <implement v-if="activeViewIndex==='2-1'"></implement>
       </div>
     </div>
@@ -99,6 +100,9 @@ export default {
       }
       if (e === "2-2") {
       }
+    },
+    logout(){
+        this.$router.push({path: '/adminLogin'});
     }
   }
 };
